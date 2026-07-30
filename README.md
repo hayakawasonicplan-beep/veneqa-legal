@@ -1,19 +1,13 @@
 # veneqa-legal
 
-Public legal pages for **VENEQA** / **VENEQA Mobile** (Privacy Policy & Terms of Use).
+Public legal pages for **VENEQA** / **VENEQA Mobile**.
 
-English is primary; Japanese is a convenience translation.
+| Page | URL |
+|------|-----|
+| Privacy (EN) | https://hayakawasonicplan-beep.github.io/veneqa-legal/privacy.html |
+| Terms (EN) | https://hayakawasonicplan-beep.github.io/veneqa-legal/terms.html |
+| 特商法 (JA) | https://hayakawasonicplan-beep.github.io/veneqa-legal/tokushoho.html |
 
-## Live site (GitHub Pages)
+English is primary for Privacy/Terms. Japanese 特商法 page is authoritative for Japan commercial disclosure.
 
-After Pages is enabled on branch `main` / root:
-
-- https://hayakawasonicplan-beep.github.io/veneqa-legal/
-- https://hayakawasonicplan-beep.github.io/veneqa-legal/privacy.html
-- https://hayakawasonicplan-beep.github.io/veneqa-legal/terms.html
-
-Use the English Privacy URL in App Store Connect.
-
-## Source of truth
-
-Edit files here for the public site. Keep copies in the main VENEQA repo (`docs/legal/` and the iOS app bundle) in sync when you change text.
+Fill address fields marked 【要記入】/ [TO FILL] before paid Japan sales.
