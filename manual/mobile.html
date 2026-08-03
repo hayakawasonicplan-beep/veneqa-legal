@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VENEQA Mobile User Guide</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+      color: #111;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #eee; background: #111; }
+      a { color: #8ec8ff; }
+      code, .kbd { background: #222; border-color: #444; }
+      table { border-color: #444; }
+      th, td { border-color: #333; }
+      .callout { background: #1a1a1a; border-color: #444; }
+      .meta { color: #aaa; }
+      nav.toc a { color: #ccc; }
+    }
+    h1 { font-size: 1.45rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
+    @media (prefers-color-scheme: dark) { h2 { border-color: #333; } }
+    h3 { font-size: 1rem; margin-top: 1.35rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.75rem 0 1.25rem;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.45rem 0.5rem;
+      border: 1px solid #ddd;
+    }
+    th { font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #eee;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.85em;
+      background: #eee;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.05em 0.4em;
+    }
+    .callout {
+      border: 1px solid #ccc;
+      border-left: 3px solid #666;
+      padding: 0.75rem 0.9rem;
+      margin: 1rem 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.92rem;
+    }
+    nav.toc {
+      font-size: 0.92rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+    nav.toc ol { margin: 0.4rem 0 0; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+    @media (prefers-color-scheme: dark) { footer { border-color: #333; } }
+  </style>
+</head>
+<body>
+  <h1>VENEQA Mobile User Guide</h1>
+  <p class="meta">
+    English · Applies to <strong>VENEQA Mobile Pro</strong> and <strong>VENEQA Mobile</strong> (Lite)<br />
+    Last updated: 3 August 2026
+  </p>
+
+  <p>
+    VENEQA Mobile is an on-device measurement app for live <strong>spectrogram</strong> and
+    <strong>RTA</strong> (Decay fill + Avg line). It is designed for sound-system work on iPhone —
+    walkaround checks, relative spectrum, and (Pro) sending averaged traces to the VENEQA desktop app
+    on the same local network.
+  </p>
+
+  <nav class="toc" aria-label="Contents">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#editions">Editions (Pro vs Lite)</a></li>
+      <li><a href="#first-launch">First launch</a></li>
+      <li><a href="#screen">Screen layout</a></li>
+      <li><a href="#toolbar">Toolbar controls</a></li>
+      <li><a href="#settings">Settings</a></li>
+      <li><a href="#pro-link">Pro: link to VENEQA on Mac/PC</a></li>
+      <li><a href="#tips">Measurement tips</a></li>
+      <li><a href="#troubleshoot">Troubleshooting</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="editions">1. Editions (Pro vs Lite)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>VENEQA Mobile Pro</th>
+        <th>VENEQA Mobile (Lite)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Home screen name</td>
+        <td colspan="2">VENEQA Mobile</td>
+      </tr>
+      <tr>
+        <td>In-app header</td>
+        <td>VENEQA Mobile Pro</td>
+        <td>VENEQA Mobile</td>
+      </tr>
+      <tr>
+        <td>Spectrogram + RTA</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Mic / SPL trim</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Send Avg → desktop VENEQA</td>
+        <td>Yes (UDP)</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Remote “PC Space” capture</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Analysis features are the same. Lite hides the phone / send controls and the Settings sections for
+    PC destination and send mode.
+  </p>
+
+  <h2 id="first-launch">2. First launch</h2>
+  <ol>
+    <li>Open the app on a real iPhone (simulator can show UI; real mic behaviour is best on device).</li>
+    <li>Allow <strong>Microphone</strong> access when iOS asks.</li>
+    <li>Tap <span class="kbd">▶</span> if analysis is paused (the app starts shortly after open).</li>
+    <li>Optional: open <strong>Settings</strong> (gear) to set FFT size, mic position, and SPL trim.</li>
+  </ol>
+  <div class="callout">
+    <strong>Pro only:</strong> When you first send to a Mac/PC, allow <strong>Local Network</strong>
+    if iOS prompts. Without that permission, UDP send will fail.
+  </div>
+
+  <h2 id="screen">3. Screen layout</h2>
+  <table>
+    <thead>
+      <tr><th>Region</th><th>What you see</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Top</td>
+        <td><strong>Spectrogram</strong> — time vs frequency colour map from the phone mic.</td>
+      </tr>
+      <tr>
+        <td>Bottom</td>
+        <td><strong>RTA</strong> — Decay fill (peak hold) plus Avg line (exponential average).</td>
+      </tr>
+      <tr>
+        <td>Toolbar</td>
+        <td>Smoothing / times, Reset Avg, (Pro) phone send panel, Play / Pause.</td>
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td>Plots stacked; toolbar along the bottom.</td>
+      </tr>
+      <tr>
+        <td>Landscape</td>
+        <td>Plots on the left; toolbar along the trailing edge.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Drag the spectrogram dB range (left edge) to match the level of what you are looking at.
+    Crosshair readouts follow the cursor on the plots.
+  </p>
+
+  <h2 id="toolbar">4. Toolbar controls</h2>
+  <h3>Menus</h3>
+  <table>
+    <thead>
+      <tr><th>Control</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>RTA</strong> (1/3 … 1/48, No)</td>
+        <td>Fractional-octave smoothing for the <em>Decay</em> fill. <code>No</code> is raw FFT bins.</td>
+      </tr>
+      <tr>
+        <td><strong>Dec</strong> (0.1s … 4.0s)</td>
+        <td>Decay hold time for the filled envelope.</td>
+      </tr>
+      <tr>
+        <td><strong>Avg</strong> (smoothing)</td>
+        <td>Display smoothing for the Avg line. Cannot be finer than Decay smoothing.</td>
+      </tr>
+      <tr>
+        <td><strong>Avg</strong> (3s … 15s)</td>
+        <td>Time constant (τ) for the exponential average.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Buttons</h3>
+  <ul>
+    <li><strong>Reset Avg</strong> — clears the running average so a new Avg builds from that moment.</li>
+    <li><strong>Phone</strong> (Pro) — opens / closes the Remote → PC send panel.</li>
+    <li><strong>Play / Pause</strong> — starts or pauses live analysis (pause glyph blinks while paused).</li>
+  </ul>
+
+  <h2 id="settings">5. Settings</h2>
+  <p>Open Settings from the header gear icon.</p>
+
+  <h3>Analysis</h3>
+  <ul>
+    <li><strong>Sample Rate</strong> — shown read-only (from the active audio session).</li>
+    <li><strong>FFT Size</strong> — 8192 / 16384 / 32768. Larger FFT → finer frequency resolution, slightly more latency/CPU.</li>
+  </ul>
+
+  <h3>Spectrogram</h3>
+  <ul>
+    <li><strong>Colormap</strong> — VENEQA, Warm, Hellfire, Frost, Emerald, Bloom, Neon (aligned with desktop Show).</li>
+  </ul>
+
+  <h3>Microphone</h3>
+  <ul>
+    <li><strong>Position</strong> — Bottom / Front / Back (by data source). All use measurement mode (less system HPF/AGC).</li>
+    <li>Changing position restarts the mic — re-check <strong>SPL Trim</strong> afterward.</li>
+  </ul>
+
+  <h3>RTA Level</h3>
+  <ul>
+    <li><strong>SPL Trim</strong> — ±20 dB trim on top of the built-in +120 dB base (dBFS → approximate SPL readout).</li>
+    <li><strong>Readout colour thresholds</strong> — green / yellow / red levels for the meter-style readout (same idea as the PC SPL Meter).</li>
+  </ul>
+  <div class="callout">
+    Built-in mics are not calibrated absolute SPL meters. Use trim for relative work or rough alignment
+    against a known reference; do not treat the number as certified SPL.
+  </div>
+
+  <h3>About / Legal</h3>
+  <p>
+    <strong>Settings → About</strong> shows app name and version, and opens Privacy Policy / Terms of Use
+    in Safari.
+  </p>
+
+  <h2 id="pro-link">6. Pro: link to VENEQA on Mac/PC</h2>
+  <p>
+    Pro can talk to desktop VENEQA over UDP on your local network (same Wi‑Fi or Personal Hotspot).
+    Default port is <strong>5005</strong>.
+  </p>
+
+  <h3>One-time setup</h3>
+  <ol>
+    <li>On the Mac/PC: open VENEQA → <strong>Preferences → Remote</strong> → enable remote access. Status should show Listening…</li>
+    <li>Note the <strong>IP address</strong> shown there (Hotspot is often <code>172.20.10.x</code> — use the exact value).</li>
+    <li>On the phone: <strong>Settings → PC Destination</strong> — enter that IP and port <code>5005</code>.</li>
+    <li>
+      <strong>Settings → Send Avg → PC</strong>:
+      <ul>
+        <li><strong>Replace same name</strong> — fixed point name (e.g. <code>L</code> / <code>R</code>); each send overwrites that Mobile inbox trace.</li>
+        <li><strong>New each send</strong> — walkaround mode: <code>base-01</code>, <code>base-02</code>, … after each successful send.</li>
+      </ul>
+    </li>
+    <li>Allow <strong>Local Network</strong> when prompted.</li>
+  </ol>
+
+  <h3>Send panel (phone icon)</h3>
+  <table>
+    <thead>
+      <tr><th>Action</th><th>What it does</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>PC Space (TF / RTA capture)</strong></td>
+        <td>
+          Same as pressing Space on the desktop: Tuning captures live TF; Show captures RTA Avg.
+          Measurement uses the <em>PC</em> mic/ref — the phone does not measure TF itself.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Avg → PC</strong></td>
+        <td>
+          Sends the phone’s current RTA Avg curve to desktop Show → <strong>Mobile inbox</strong>
+          (not a TF measurement). PC RTA Play is not required to receive it.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="tips">7. Measurement tips</h2>
+  <ul>
+    <li>Hold the phone steadily; aim the selected mic toward the source or room you care about.</li>
+    <li>Use longer <strong>Avg τ</strong> (10–15 s) for a stable walkaround curve; shorter for quicker response.</li>
+    <li>Reset Avg when you change position or program so old energy does not pollute the average.</li>
+    <li>For Pro walkarounds, prefer <strong>New each send</strong> and a short base name (e.g. <code>A</code>, <code>FL</code>).</li>
+    <li>Keep phone and Mac on the same LAN; avoid guest Wi‑Fi that blocks device-to-device traffic.</li>
+  </ul>
+
+  <h2 id="troubleshoot">8. Troubleshooting</h2>
+  <table>
+    <thead>
+      <tr><th>Symptom</th><th>What to try</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No spectrum / silence</td>
+        <td>Check Mic permission; try another Mic Position; confirm Play is not paused; unmute the source.</td>
+      </tr>
+      <tr>
+        <td>Level looks wrong</td>
+        <td>Adjust SPL Trim; check dB range on the spectrogram; remember built-in mics are uncalibrated.</td>
+      </tr>
+      <tr>
+        <td>Pro send fails</td>
+        <td>
+          Confirm Remote Listening on PC, correct IP/port, same network, Local Network allowed.
+          Status text on the send panel shows success or failure.
+        </td>
+      </tr>
+      <tr>
+        <td>Nothing in Mobile inbox</td>
+        <td>Use <strong>Avg → PC</strong> (not only Space). Space captures on the PC inputs, not the phone Avg.</td>
+      </tr>
+      <tr>
+        <td>App sleeps / gaps</td>
+        <td>Keep the screen awake while measuring; backgrounding may interrupt capture.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p>
+      Related:
+      <a href="../privacy.html">Privacy Policy</a> ·
+      <a href="../terms.html">Terms of Use</a>
+    </p>
+    <p>Contact: <a href="mailto:info@veneqa.audio">info@veneqa.audio</a></p>
+  </footer>
+</body>
+</html>

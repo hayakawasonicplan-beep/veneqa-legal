@@ -1,9 +1,10 @@
 # veneqa-legal
 
-Public legal pages for **VENEQA** / **VENEQA Mobile**.
+Public manuals and legal pages for **VENEQA** / **VENEQA Mobile**.
 
 | Page | URL |
 |------|-----|
+| Mobile User Guide (EN) | https://hayakawasonicplan-beep.github.io/veneqa-legal/manual/mobile.html |
 | Privacy (EN) | https://hayakawasonicplan-beep.github.io/veneqa-legal/privacy.html |
 | Terms (EN) | https://hayakawasonicplan-beep.github.io/veneqa-legal/terms.html |
 | 特商法 (JA) | https://hayakawasonicplan-beep.github.io/veneqa-legal/tokushoho.html |
